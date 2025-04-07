@@ -1,0 +1,25 @@
+---
+import meLogo from '../assets/Me.jpg';
+import HeaderButton from './HeaderButton.astro';
+---
+
+<header 
+class="flex justify-between items-center py-6 w-full bg-gray-900"
+>
+    <!-- Left side -->
+    <div class="px-15 flex items-center">
+        <img
+            class="rounded-full w-15 h-15 border-2 border-gray-100" 
+            src={meLogo.src} 
+            alt="my photo">
+        <span class="ml-3 font-bold">Daniel Sereno Fernandez</span>
+    </div>
+
+    <!-- Right side -->
+    <nav class="flex felx-row gap-x-10 opacity-90 px-15">
+        <HeaderButton href="/">Home</a>
+        <HeaderButton href="/about">About</a>
+        <HeaderButton href="/projects">Projects</a>
+        <HeaderButton href="/contact">Contact</a>
+    </nav>
+</header>
