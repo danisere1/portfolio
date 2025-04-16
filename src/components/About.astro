@@ -1,30 +1,41 @@
 ---
 import AboutButton from "./AboutButton.astro";
+import Highlight from "./Highlight.astro";
+import Me from "../assets/Me.png";
 ---
 
-<div class="py-50 px-15 flex flex-col items-center justify-center w-full h-full">
-    <h1 class="text-6xl font-bold text-text-main">
+<div class="py-40 px-15 flex flex-col items-center justify-center w-full h-full">
+    <h1 class="text-5xl font-bold text-text-main pb-10">
         DANIEL SERENO FERNANDEZ
     </h1>
-    <h2 class="text-4xl font-bold text-text-accent py-10">
+    <h2 class="text-4xl font-bold text-text-accent pb-5">
         DEVOPS ENGINEER
     </h2>
-    <p class="max-w-3xl text-center text-xl"> 
-        DevOps Engineer focused on <span>automation</span>, <span>continuous integration</span>, and efficient deployment pipelines.
-        I have hands-on experience with tools like Jenkins, Docker, SonarQube, Artifactory, and Bitbucket, creating CI/CD processes that streamline the software development lifecycle. I work primarily in AWS environments and am currently pursuing AWS certifications to deepen my cloud expertise. I'm passionate about infrastructure as code, observability, and continuous improvement in cloud-native environments. I hold a Master degree in Artificial Intelligence, field I am passionate about.
-    </p>
-    <nav class="py-10">
-        <AboutButton href="">
-            <p>DESCARGAR CV</p>
-        </AboutButton>
-        <AboutButton href="">
-            <p>GITHUB</p>
-        </AboutButton>
-        <AboutButton href="">
-            <p>LINKEDIN</p>
-        </AboutButton>
-        <AboutButton href="">
-            <p>MALT</p>
-        </AboutButton>
-    </nav>
+    <h3 class="max-w-3xl text-xl font-bold text-text-main text-center">
+        Automating the future, one pipeline at a time — empowering teams with efficient CI/CD workflows and intelligent infrastructure
+    </h3>
+    <section class="px-15 pt-20 flex justify-center w-full h-full gap-10">
+        <figure class="flex-shrink-0 pt-10">
+            <img src={Me.src} alt="Chico saludando" class="w-80 h-auto"/>
+        </figure>
+        <div class="flex flex-col items-start justify-center max-w-4xl px-40 pt-30">
+            <nav>
+                <AboutButton href="">
+                    <p>CV</p>
+                </AboutButton>
+                <AboutButton href="">
+                    <p>GITHUB</p>
+                </AboutButton>
+                <AboutButton href="">
+                   <p>LINKEDIN</p>
+                </AboutButton>
+                <AboutButton href="">
+                    <p>MALT</p>
+            </nav>
+            <p class="max-w-xl text-center text-xl pb-6 py-10"> 
+                Hello there👋, I am a DevOps Engineer focused on <Highlight>automation</Highlight>, <Highlight>continuous integration</Highlight>, and efficient deployment pipelines.
+                I have hands-on experience with tools like <Highlight>Jenkins</Highlight>, <Highlight>Docker</Highlight>, <Highlight>SonarQube</Highlight>, <Highlight>Artifactory</Highlight>, and <Highlight>Bitbucket</Highlight>, creating <Highlight>CI/CD</Highlight> processes that streamline the software development lifecycle. I work primarily in <Highlight>AWS</Highlight> environments and am currently pursuing <Highlight>AWS certifications</Highlight> to deepen my cloud expertise. I'm passionate about <Highlight>infrastructure as code</Highlight>, <Highlight>observability</Highlight>, and continuous improvement in cloud-native environments. I hold a <Highlight>Master degree in Artificial Intelligence</Highlight>, field I am passionate about.
+            </p>
+        </div>
+    </section>
 </div>
