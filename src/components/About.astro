@@ -4,8 +4,8 @@ import Highlight from "./Highlight.astro";
 import Me from "../assets/Me.png";
 ---
 
-<div class="py-40 px-15 flex flex-col items-center justify-center w-full h-full">
-    <h1 class="text-5xl font-bold text-text-main pb-10">
+<div class="py-40 px-15 flex flex-col items-center justify-center w-9/12 h-full">
+    <h1 class="text-5xl font-bold text-text-main text-center pb-10">
         DANIEL SERENO FERNANDEZ
     </h1>
     <h2 class="text-4xl font-bold text-text-accent pb-5">
@@ -14,12 +14,12 @@ import Me from "../assets/Me.png";
     <h3 class="max-w-3xl text-xl font-bold text-text-main text-center">
         Automating the future, one pipeline at a time — empowering teams with efficient CI/CD workflows and intelligent infrastructure
     </h3>
-    <section class="px-15 pt-20 flex justify-center w-full h-full gap-10">
-        <figure class="flex-shrink-0 pt-10">
-            <img src={Me.src} alt="Chico saludando" class="w-80 h-auto"/>
+    <section class="pt-30 flex flex-col lg:flex-row justify-center items-center w-full h-full gap-10">
+        <figure class="flex-shrink-0 self-center w-120 flex justify-center items-center">
+            <img src={Me.src} alt="Chico saludando" class="w-120 h-150"/>
         </figure>
-        <div class="flex flex-col items-start justify-center max-w-4xl px-40 pt-30">
-            <nav class="pb-7">
+        <div class="flex flex-col items-center justify-center w-5/12 pt-30 min-w-100">
+            <nav class="pb-7 flex flex-row flex-wrap items-center justify-center w-full">
                 <AboutButton href="">
                     CV
                 </AboutButton>
@@ -32,7 +32,7 @@ import Me from "../assets/Me.png";
                 <AboutButton href="">
                     MALT
             </nav>
-            <p class="max-w-xl text-xl pl-7 pr-7 pb-7 pt-7 bg-white/3 backdrop-blur-md rounded-2xl border border-white/20 shadow-md hover:border-button hover:shadow-lg transition-all duration-900 ease-in-out"> 
+            <p class="pl-7 pr-7 pb-7 pt-7 bg-white/3 backdrop-blur-md rounded-2xl border border-white/20 shadow-md hover:border-button hover:shadow-lg transition-all duration-900 ease-in-out w-full"> 
                 Hello there👋, I am a DevOps Engineer focused on <Highlight>automation</Highlight>, <Highlight>continuous integration</Highlight>, and efficient deployment pipelines.
                 I have hands-on experience with tools like <Highlight>Jenkins</Highlight>, <Highlight>Docker</Highlight>, <Highlight>SonarQube</Highlight>, <Highlight>Artifactory</Highlight>, and <Highlight>Bitbucket</Highlight>, creating <Highlight>CI/CD</Highlight> processes that streamline the software development lifecycle. I work primarily in <Highlight>AWS</Highlight> environments and am currently pursuing <Highlight>AWS certifications</Highlight> to deepen my cloud expertise. I'm passionate about <Highlight>infrastructure as code</Highlight>, <Highlight>observability</Highlight>, and continuous improvement in cloud-native environments. I hold a <Highlight>Master degree in Artificial Intelligence</Highlight>, field I am passionate about.
             </p>
@@ -40,7 +40,8 @@ import Me from "../assets/Me.png";
     </section>
 </div>
 
-<style>
+<style> 
+
     p:hover::before {
     content: '';
     position: absolute;
