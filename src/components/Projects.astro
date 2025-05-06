@@ -1,0 +1,22 @@
+---
+import { supabase } from '../lib/supabase';
+
+const { data: projects, error } = await supabase
+  .from('projects')
+  .select('*');
+---
+
+<html>
+  <body>
+    <h1>Mis Proyectos</h1>
+    {error && <p>Error al cargar proyectos: {error.message}</p>}
+    <ul>
+      {projects?.map(project => (
+        <li>
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
