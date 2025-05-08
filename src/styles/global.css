@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+.card-hover-effect:hover::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #3b82f6; /* Azul */
+    border-radius: 50%;
+    animation: move-around 8s linear infinite;
+    box-shadow: 0 0 10px 3px #6d3bf6,0 0 25px 6px #6d3bf696,0 0 40px 10px #6d3bf631
+}
+    
+    @keyframes move-around {
+    0% {
+        bottom: calc(100% - .6em);
+        left: calc(0% - 3px)
+    }
+    
+    24% {
+        bottom: .4em;
+        left: calc(0% - 3px)
+    }
+
+    25% {
+        bottom: .05em;
+        left: .05em
+    }
+
+    26% {
+        bottom: calc(0% - 3px);
+        left: .6em
+    }
+
+    49% {
+        bottom: calc(0% - 3px);
+        left: calc(100% - .6rem)
+    }
+
+    50% {
+        bottom: .02em;
+        right: .02em
+    }
+
+    51% {
+        bottom: .6em;
+        left: calc(100% - 2px)
+    }
+
+    74% {
+        bottom: calc(100% - .6em);
+        left: calc(100% - 2px)
+    }
+
+    75% {
+        bottom: calc(100% - .2em);
+        right: .02em
+    }
+
+    76% {
+        bottom: calc(100% - 2px);
+        left: calc(100% - .6em)
+    }
+
+    98% {
+        bottom: calc(100% - 2px);
+        left: .6em
+    }
+
+    99% {
+        bottom: calc(100% - .4rem);
+        left: .02rem
+    }
+
+    to {
+        bottom: calc(100% - .6em);
+        left: calc(0% - 4px)
+    }
+}

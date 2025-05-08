@@ -32,91 +32,10 @@ import Me from "../assets/Me.png";
                 <AboutButton href="">
                     MALT
             </nav>
-            <p class="pl-7 pr-7 pb-7 pt-7 bg-white/3 backdrop-blur-md rounded-2xl border border-white/20 shadow-md hover:border-button hover:shadow-lg hover:scale-110 scale-100 transition-all duration-700 ease-in-out w-10/12"> 
+            <p class="pl-7 pr-7 pb-7 pt-7 bg-white/3 backdrop-blur-md rounded-2xl border border-white/20 shadow-md hover:border-button hover:shadow-lg hover:scale-110 scale-100 transition-all duration-700 ease-in-out w-10/12 card-hover-effect"> 
                 Hello there👋, I am a DevOps Engineer focused on <Highlight>automation</Highlight>, <Highlight>continuous integration</Highlight>, and efficient deployment pipelines.
                 I have hands-on experience with tools like <Highlight>Jenkins</Highlight>, <Highlight>Docker</Highlight>, <Highlight>SonarQube</Highlight>, <Highlight>Artifactory</Highlight>, and <Highlight>Bitbucket</Highlight>, creating <Highlight>CI/CD</Highlight> processes that streamline the software development lifecycle. I work primarily in <Highlight>AWS</Highlight> environments and am currently pursuing <Highlight>AWS certifications</Highlight> to deepen my cloud expertise. I'm passionate about <Highlight>infrastructure as code</Highlight>, <Highlight>observability</Highlight>, and continuous improvement in cloud-native environments. I hold a <Highlight>Master degree in Artificial Intelligence</Highlight>, field I am passionate about.
             </p>
         </div>
     </section>
 </div>
-
-<style> 
-
-    p:hover::before {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: #3b82f6; /* Azul */
-    border-radius: 50%;
-    animation: move-around 8s linear infinite;
-    box-shadow: 0 0 10px 3px #6d3bf6,0 0 25px 6px #6d3bf696,0 0 40px 10px #6d3bf631
-}
-    
-    @keyframes move-around {
-    0% {
-        bottom: calc(100% - .6em);
-        left: calc(0% - 3px)
-    }
-    
-    24% {
-        bottom: .4em;
-        left: calc(0% - 3px)
-    }
-
-    25% {
-        bottom: .05em;
-        left: .05em
-    }
-
-    26% {
-        bottom: calc(0% - 3px);
-        left: .6em
-    }
-
-    49% {
-        bottom: calc(0% - 3px);
-        left: calc(100% - .6rem)
-    }
-
-    50% {
-        bottom: .02em;
-        right: .02em
-    }
-
-    51% {
-        bottom: .6em;
-        left: calc(100% - 2px)
-    }
-
-    74% {
-        bottom: calc(100% - .6em);
-        left: calc(100% - 2px)
-    }
-
-    75% {
-        bottom: calc(100% - .2em);
-        right: .02em
-    }
-
-    76% {
-        bottom: calc(100% - 2px);
-        left: calc(100% - .6em)
-    }
-
-    98% {
-        bottom: calc(100% - 2px);
-        left: .6em
-    }
-
-    99% {
-        bottom: calc(100% - .4rem);
-        left: .02rem
-    }
-
-    to {
-        bottom: calc(100% - .6em);
-        left: calc(0% - 4px)
-    }
-}
-</style>
