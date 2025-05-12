@@ -7,9 +7,9 @@ const { data: projects } = await supabase
   .from('projects')
   .select('*');
 ---
-<div class="flex flex-col items-center justify-center">
-    <Title>PROJECTS</Title>
-    <section class="gap-10 flex flex-row items-center justify-center">
+<div class="flex flex-col items-center justify-center w-full">
+    <Title>Projects</Title>
+    <section class="gap-30 flex flex-row items-center justify-center w-full">
         {
             projects?.map(project => (
                 <CardProject
