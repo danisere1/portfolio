@@ -1,0 +1,21 @@
+---
+import { supabase } from '../lib/supabase';
+import Title from './Title.astro';
+
+const { data: studies } = await supabase
+  .from('studies')
+  .select('*');
+---
+<div class="pb-40 gap-10 flex flex-col items-center justify-center w-4/12">
+    <Title>STUDIES AND CERTIFICATIONS</Title>
+    <article class="pl-7 pr-7 pt-7 pb-7 flex flex-col items-center justify-center bg-white/3 backdrop-blur-md rounded-2xl border border-white/20 shadow-md hover:border-button hover:shadow-lg hover:scale-110 scale-100 transition-all duration-700 ease-in-out w-full card-hover-effect font-bold text-xl">
+        {
+            studies?.map(study => (
+                <p>
+                    {study.title} - {study.school}
+                </p>
+                
+            ))
+        }
+    </article>
+</div>
