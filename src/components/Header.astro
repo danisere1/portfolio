@@ -4,31 +4,22 @@ import HeaderButton from './HeaderButton.astro';
 ---
 
 <header 
-class="flex justify-between items-center py-6 w-full"
-style="padding: 1% 15%;"
+class="sticky top-0 z-50 flex justify-between items-center pt-8 pb-3 w-full relative backdrop-blur bg-transparent"
 >
-    <!-- Left side -->
-    <div class="px-15 flex items-center">
-        <img
-            class="rounded-full w-15 h-17 border-3 border-text-main" 
-            src={meLogo.src} 
-            alt="my photo">
-        <span class="ml-3 font-bold text-text-main">Daniel Sereno Fernandez</span>
-    </div>
-
-    <!-- Right side -->
-    <nav class="flex felx-row gap-x-10 opacity-90 px-15 flex-wrap">
+    
+    <nav class="flex flex-row gap-x-10 opacity-90 px-50 flex-wrap ml-auto">
         <HeaderButton href="">
             Experience
-        </a>
+        </HeaderButton>
         <HeaderButton href="">
             Projects
-        </a>
+        </HeaderButton>
         <HeaderButton href="">
             Studies
-        </a>
+        </HeaderButton>
         <HeaderButton href="">
             Contact
-        </a>
+        </HeaderButton>
     </nav>
+    <div class="absolute left-0 right-0 -bottom-2 h-0.5 bg-white rounded-full opacity-40"></div>
 </header>
