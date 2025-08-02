@@ -1,11 +1,13 @@
 ---
 import HeaderButton from './HeaderButton.astro';
+import Logo from "../assets/Logo.png";
 ---
 
 <header 
-class="sticky top-0 z-50 flex justify-between items-center pt-8 w-full backdrop-blur bg-transparent shadow-lg shadow-blue-800"
+class="sticky top-0 z-50 flex justify-between items-center w-full h-25 backdrop-blur bg-transparent shadow-lg shadow-blue-800"
 >
-    <nav class="flex flex-row gap-x-10 opacity-90 px-50 flex-wrap ml-auto pb-3">
+    <img src={Logo.src} alt="Logo" class="w-20 h-20 ml-10"/>
+    <nav class="flex flex-row gap-x-10 opacity-90 px-50 flex-wrap ml-auto pt-3 pb-3">
         <HeaderButton href="">
             Experience
         </HeaderButton>
