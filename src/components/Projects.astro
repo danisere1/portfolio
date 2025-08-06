@@ -7,7 +7,7 @@ const { data: projects } = await supabase
   .from('projects')
   .select('*');
 ---
-<div class="pb-40 gap-10 flex flex-col items-center justify-center w-9/12">
+<div id="projects" class="pb-40 gap-10 flex flex-col items-center justify-center w-9/12">
     <Title>Projects</Title>
     <div class="w-8/12 items-stretch justify-center grid grid-cols-1 md:grid-cols-2 gap-10">
         {

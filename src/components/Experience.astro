@@ -7,7 +7,7 @@ const { data: experiences } = await supabase
   .from('experiences')
   .select('*');
 ---
-<div class="pb-40 gap-10 flex flex-col items-center justify-center w-9/12">
+<div id="experience" class="pb-40 gap-10 flex flex-col items-center justify-center w-9/12">
     <Title>Experience</Title>
     <div class="w-5/12 items-center justify-center flex flex-col gap-10">
         {
