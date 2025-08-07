@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+.card-hover-color:hover {
+    border-color: #6d3bf6; /* Morado */
+}
+
+.button-about-hover:hover{
+    text-shadow: #6d3bf6 0 0 40px, #6d3bf6 0 0 50px, #6d3bf6 0 0 60px;
+}
+
 .card-hover-effect:hover::before {
     content: '';
     position: absolute;

@@ -1,14 +1,15 @@
-
+---
+const { href } = Astro.props;
+---
 
 <a 
-    class="border-button border-3 rounded-full px-7 py-5 text-text-main cursor-pointer font-bold hover:border-button-hover
+    class="px-7 py-5 text-text-main cursor-pointer font-bold
     focus:ring-4 focus:outline-none focus: ring-[#1dalf2]/50 text-center inline-flex items-center dark: focus:ring-
-    [#1dalf2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200
-    ease-in-out hover:scale-110 scale-90 gap-x-2_opacity-70 hover: opacity-100|"
+    [#1dalf2]/55 mr-2 mb-2transition-all duration-200
+    ease-in-out scale-110 gap-x-2_opacity-70 button-about-hover"
     target="_blank"
-    style="transition: text-shadow 0.2s;"
-    onmouseover="this.style.textShadow='0 4px 24px #8541f8'"
-    onmouseout="this.style.textShadow='none'"
+    style="transition: text-shadow 0.5s;"
+    href={href}
 >
     <slot/>
 </a>
