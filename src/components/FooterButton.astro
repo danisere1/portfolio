@@ -1,6 +1,11 @@
+---
+const { href } = Astro.props;
+---
+
 <a 
     class="hover:opacity-80"
     target="_blank"
+    href={href}
 >
     <slot/>
 </a>
