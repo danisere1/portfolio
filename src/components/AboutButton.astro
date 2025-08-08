@@ -3,12 +3,11 @@ const { href } = Astro.props;
 ---
 
 <a 
-    class="px-7 py-5 text-text-main cursor-pointer font-bold
+    class="group px-7 py-5 text-text-main cursor-pointer font-bold
     focus:ring-4 focus:outline-none focus: ring-[#1dalf2]/50 text-center inline-flex items-center dark: focus:ring-
     [#1dalf2]/55 mr-2 mb-2transition-all duration-200
-    ease-in-out scale-110 gap-x-2_opacity-70 button-about-hover"
+    ease-in-out scale-110 gap-x-2_opacity-70"
     target="_blank"
-    style="transition: text-shadow 0.5s;"
     href={href}
 >
     <slot/>

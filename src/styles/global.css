@@ -4,8 +4,13 @@
     border-color: #6d3bf6; /* Morado */
 }
 
-.button-about-hover:hover{
-    text-shadow: #6d3bf6 0 0 40px, #6d3bf6 0 0 50px, #6d3bf6 0 0 60px;
+.group:hover .about-button-hover {
+    filter: drop-shadow(0 0 10px #6d3bf6)
+            drop-shadow(0 0 20px #6d3bf6);
+}
+
+.about-button-hover {
+    transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover-effect:hover::before {
