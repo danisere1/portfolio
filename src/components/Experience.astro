@@ -5,8 +5,10 @@ import Title from './Title.astro';
 
 const { data: experiences } = await supabase
   .from('experiences')
-  .select('*');
+  .select('*')
+  .order('start_date', { ascending: false });
 ---
+
 <div id="experience" class="pb-40 gap-10 flex flex-col items-center justify-center w-9/12">
     <Title>Experience</Title>
     <div class="w-5/12 items-center justify-center flex flex-col gap-10">
