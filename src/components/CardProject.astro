@@ -1,0 +1,33 @@
+---
+import CardTitle from './CardTitle.astro';
+import { parseHighlights  } from '../lib/highlightParser';
+import Highlight from './Highlight.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  github: string | null;
+  image_url: string | null;
+}
+
+const { title, description, github, image_url } = Astro.props as Props;
+const parts = parseHighlights (description);
+---
+
+<a href={ github } target="_blank" rel="noreferrer" class="scroll-reveal content-panel p-7 flex flex-col items-start justify-start w-full">
+
+    <div class="pb-4 gap-2 flex flex-row items-center justify-between">
+        <CardTitle>
+            { title }
+        </CardTitle>
+    </div>
+    <p class="panel-copy pb-5">
+        {parts.map((part) =>
+            typeof part === 'string' ? part : <Highlight>{part.highlight}</Highlight>
+        )}
+    </p>
+    {image_url && image_url !== "null" && image_url !== "" && (
+        <img src={ image_url } alt={`Preview of ${title}`} class="w-full rounded-xl border border-white/10 object-cover" loading="lazy" />
+    )}
+
+</a>

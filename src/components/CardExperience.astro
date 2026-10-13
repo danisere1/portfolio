@@ -1,0 +1,34 @@
+---
+import CardTitle from './CardTitle.astro';
+import { parseHighlights  } from '../lib/highlightParser';
+import Highlight from './Highlight.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  start_date: Date;
+  finish_date: Date | null;
+  company: string;
+}
+
+const { title, description, start_date, finish_date, company } = Astro.props as Props;
+const parts = parseHighlights (description);
+---
+
+<article class="scroll-reveal content-panel p-7 flex flex-col items-start justify-center w-full">
+
+    <div class="pb-5 gap-2 flex flex-col items-start justify-between">
+        <CardTitle>
+            { title } - { company }
+        </CardTitle>
+        <p class="text-sm font-semibold tracking-wide text-violet-200/75">
+            From {start_date} to {finish_date ? finish_date : 'Present'}
+        </p>
+    </div>
+    <p class="panel-copy pb-1">
+        {parts.map((part) =>
+            typeof part === 'string' ? part : <Highlight>{part.highlight}</Highlight>
+        )}
+    </p>
+
+</article>
