@@ -1,25 +1,100 @@
 ---
-import HeaderButton from './HeaderButton.astro';
 import Logo from "../assets/Logo.png";
 ---
 
-<header 
-class="sticky top-0 z-50 flex justify-between items-center w-full h-25 backdrop-blur bg-transparent shadow-lg shadow-purple-800"
->
-    <img src={Logo.src} alt="Logo" class="w-16 h-16 ml-10"/>
-    <nav class="flex flex-row gap-x-10 opacity-90 px-50 flex-wrap ml-auto pt-3 pb-3">
-        <HeaderButton href="#experience">
-            Experience
-        </HeaderButton>
-        <HeaderButton href="#projects">
-            Projects
-        </HeaderButton>
-        <HeaderButton href="#studies">
-            Studies
-        </HeaderButton>
-        <HeaderButton href="#contact">
-            Contact
-        </HeaderButton>
-    </nav>
-    <div class="absolute left-0 right-0 -bottom-0 h-0.5 bg-white rounded-full opacity-40"></div>
+<header class="sticky top-0 z-50 flex w-full justify-center px-3 pt-4 sm:px-6">
+    <div class="flex w-full max-w-6xl items-center gap-2 rounded-full border border-white/15 bg-[#11101bcc] p-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:gap-3 sm:p-2">
+        <a
+            href="#home"
+            data-section="#home"
+            aria-label="Back to top"
+            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300 sm:h-11 sm:w-11"
+        >
+            <img src={Logo.src} alt="" class="h-8 w-8 object-contain sm:h-9 sm:w-9"/>
+        </a>
+
+        <nav aria-label="Main navigation" class="header-nav flex min-w-0 flex-1 items-center gap-1 overflow-x-auto sm:gap-1.5">
+            <a href="#experience" data-section="#experience" class="header-nav__link">Experience</a>
+            <a href="#projects" data-section="#projects" class="header-nav__link">Projects</a>
+            <a href="#studies" data-section="#studies" class="header-nav__link">Studies</a>
+            <a href="#contact" data-section="#contact" class="header-nav__link header-nav__link--cta">Contact</a>
+        </nav>
+    </div>
 </header>
+
+<style>
+    .header-nav {
+        scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header-nav__link {
+        display: inline-flex;
+        min-height: 2.5rem;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0 0.75rem;
+        color: rgb(232 231 242 / 76%);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+    }
+
+    .header-nav__link:hover {
+        background: rgb(255 255 255 / 8%);
+        color: white;
+    }
+
+    .header-nav__link.is-active {
+        background: rgb(255 255 255 / 11%);
+        box-shadow: inset 0 0 0 1px rgb(196 181 253 / 28%);
+        color: white;
+    }
+
+    .header-nav__link:focus-visible {
+        outline: 2px solid rgb(196 181 253);
+        outline-offset: 2px;
+    }
+
+    .header-nav__link--cta {
+        margin-left: auto;
+        background: rgb(139 92 246 / 90%);
+        padding-inline: 1rem;
+        color: white;
+    }
+
+    .header-nav__link--cta:hover {
+        background: rgb(167 139 250);
+        color: white;
+        transform: translateY(-1px);
+    }
+
+    .header-nav__link--cta.is-active {
+        background: rgb(167 139 250);
+        box-shadow: 0 0 22px rgb(139 92 246 / 38%);
+        color: white;
+    }
+
+    a[data-section="#home"].is-active {
+        background: rgb(167 139 250 / 20%);
+        box-shadow: inset 0 0 0 1px rgb(196 181 253 / 35%);
+    }
+
+    @media (min-width: 640px) {
+        .header-nav__link {
+            padding-inline: 1rem;
+            font-size: 0.875rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .header-nav__link {
+            transition: none;
+        }
+    }
+</style>
